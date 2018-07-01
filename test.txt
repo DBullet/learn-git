@@ -1,6 +1,2 @@
 this is a test file.
-<<<<<<< HEAD
 this is a edit in master branch.
-=======
-this is a edit in demon branch.
->>>>>>> demon
