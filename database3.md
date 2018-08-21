@@ -115,20 +115,17 @@ CREATE TABLE 表名(
 
 约束：
     1. 是否可空
-
          NOT NULL    - 不可空
          NULL        - 可空（也用NULL表示空值）
     2. 默认值DEFAULT
         默认值，创建列时可以指定默认值，当插入数据时如果未主动设置，则自动添加默认值
         实例：
-        
         CREATE TABLE tb1(
             nid INT NOT NULL DEFAULT 2,
             num INT NOT NULL
         ) 
     3. 自增AUTO_INCREMENT
         自增，如果为某列设置自增列，插入数据时无需设置此列，默认将自增（表中只能有一个自增列）。对于自增列，必须是索引（含主键）。自增可以设置步长和起始值。设置语句为
-            
             SHOW SESSION VARIABLES LIKE 'auto_inc%';
             SET SESSION AUTO_INCREMENT_INCREMENT=2;
             SET SESSION AUTO_INCREMENT_OFFSET=10;
@@ -137,7 +134,6 @@ CREATE TABLE 表名(
             SET global AUTO_INCREMENT_INCREMENT=2;
             SET global AUTO_INCREMENT_OFFSET=10;
         实例：
-        
         CREATE TABLE tb1(
             nid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             num INT NULL
@@ -151,7 +147,6 @@ CREATE TABLE 表名(
     4. 主键PRIMARY KEY
         主键，一种特殊的唯一索引，不允许有空值，如果主键使用单个列，则它的值必须唯一，如果是多列，则其组合必须唯一。
         实例：
-        
         CREATE TABLE tb1(
             nid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             num INT NULL
@@ -164,7 +159,6 @@ CREATE TABLE 表名(
         )
     5. 唯一键UNIQUE KEY
         实例：
-        
         CREATE TABLE tb1(
             nid INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
             num INT NULL UNIQUE KEY,
@@ -173,12 +167,10 @@ CREATE TABLE 表名(
         外键的定义为：如果公共关键字在一个关系中是主关键字，那么这个公共关键字被称为另一个关系的外键，一个关系的外键作主关键字的表被称为主表，具有此外键的表被称为主表的从表。
         设置外键的作用是保证数据的完整性和一致性。
         实例：
-        
         CREATE TABLE color(
             nid INT NOT NULL PRIMARY KEY,
             name CHAR(16) NOT NULL
         )
-
         CREATE TABLE fruit(
             nid INT NOT NULL PRIMARY KEY,
             smt CHAR(32) NULL ,
