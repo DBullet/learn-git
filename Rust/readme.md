@@ -6,5 +6,5 @@ Rust References
 - Style Guide https://doc.rust-lang.org/1.0.0/style/
 - Crate STD https://doc.rust-lang.org/stable/std/
 - The Rust Refenence https://doc.rust-lang.org/reference/
-- The Rustc Book
+- The Rustc Book https://doc.rust-lang.org/rustc/
 - The Cargo Book https://doc.rust-lang.org/cargo/
